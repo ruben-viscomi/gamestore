@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/ruben-viscomi/gamestore#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "spdy": "^4.0.2"
   }
 }

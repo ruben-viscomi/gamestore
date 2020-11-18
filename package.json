@@ -1,0 +1,22 @@
+{
+  "name": "gamestore",
+  "version": "0.0.1",
+  "description": "Gamestore Back-End",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruben-viscomi/gamestore.git"
+  },
+  "author": "Ruben Viscomi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruben-viscomi/gamestore/issues"
+  },
+  "homepage": "https://github.com/ruben-viscomi/gamestore#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

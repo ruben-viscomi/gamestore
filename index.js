@@ -1,14 +1,15 @@
 require("dotenv").config({ path: "vars.env" });
 
-const path = require("path");
-const fs = require("fs");
-const express = require("express");
-const spdy = require("spdy");
-const helmet = require("helmet");
+const path      = require("path");
+const fs        = require("fs");
+const express   = require("express");
+const spdy      = require("spdy");
+const mongoose  = require("mongoose");
+const helmet    = require("helmet");
 
 const options = {
-  key: fs.readFileSync(path.relative(__dirname, "cert/key.pem")),
-  cert: fs.readFileSync(path.relative(__dirname, "cert/cert.pem")),
+  key:        fs.readFileSync(path.relative(__dirname, "cert/key.pem")),
+  cert:       fs.readFileSync(path.relative(__dirname, "cert/cert.pem")),
   passphrase: process.env.PASSPHRASE
 };
 

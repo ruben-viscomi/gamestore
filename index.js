@@ -15,10 +15,12 @@ const options = {
 const app = express();
 app.use(helmet());
 
-//Test only
-app.get('/', (req, res) => {
-  res.sendStatus(200);
-});
+app.use('/', require("./routers"));
+
+//Handle Not Found
+// app.get('*', (req, res) => {
+//   res.sendStatus(404);
+// });
 
 spdy.createServer(options, app)
   .listen(process.env.SERVER_PORT, err => {

@@ -11,8 +11,12 @@ router.use(express.json()) //
     // TODO: get all games
     if(req.query && !req.params) {
       // TODO: handle query params
+      const queryParams = req.query;
+      res.json({ method: "GET", queryParams: queryParams });
     } else if (!req.query && req.params) {
       // TODO: handle req body params
+      const bodyParams = req.body;
+      res.json({ method: "GET", bodyParams: bodyParams });
     }
     // NOTE: No query params and body allowed
     res.json({ method: "GET", games: []});

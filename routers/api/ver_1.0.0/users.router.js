@@ -11,8 +11,12 @@ router.use(express.json())
     // TODO: get users without sensitive data
     if (req.query && !req.body) {
       //TODO: handle query params
+      const queryParams = req.query;
+      res.json({ method: "GET", queryParams: queryParams });
     } else if (!req.query && req.body) {
       // TODO: handle body params
+      const bodyParams = req.body;
+      res.json({ method: "GET", bodyParams: bodyParams });
     }
     res.json({ method: "GET", users: [] });
   })

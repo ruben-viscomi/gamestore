@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-    username: String,
-    firstName: String,
-    lastName: String,
-    birthdate: Date,
+    username:   String,
+    firstName:  String,
+    lastName:   String,
+    birthdate:  Date,
     signinDate: Date,
-    email: String,
-    password: String,
-    gender: String
+    email:      String,
+    password:   String,
+    gender:     String
   }, { versionKey: false }
 );
 

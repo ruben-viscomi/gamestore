@@ -10,5 +10,5 @@ const movementSchema = new mongoose.Schema({
   }, { versionKey: false }
 );
 
-const Movement = mongoose.model('movement', movementSchema);
+const Movement = mongoose.model('Movement', movementSchema);
 module.exports = Movement;

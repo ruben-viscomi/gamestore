@@ -6,9 +6,10 @@ const gameSchema = new mongoose.Schema({
     description:  String,
     language:     { type: Map, of: String },
     price:        { type: Map, of: Number },
-    rating:       Number;
+    //price:        Number,
+    rating:       Number
   }, { versionKey: false }
 );
 
-const Game = mongoose.model("game", gameSchema);
+const Game = mongoose.model("Game", gameSchema);
 module.exports = Game;

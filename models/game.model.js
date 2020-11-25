@@ -1,12 +1,13 @@
+"use strict";
+
 const mongoose = require("mongoose");
 
 const gameSchema = new mongoose.Schema({
     code:         String,
     title:        String,
     description:  String,
-    language:     { type: Map, of: String },
+    language:     { audio: [String], subtitles: [String] },
     price:        { type: Map, of: Number },
-    //price:        Number,
     rating:       Number
   }, { versionKey: false }
 );

@@ -1,3 +1,5 @@
+"use strict";
+
 require("dotenv").config({ path: "vars.env" });
 
 const path      = require("path");
@@ -21,8 +23,8 @@ mongoose.connect(process.env.DB_URI, {
 });
 
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', console.log.bind(console, 'Successfully connected to gamestore db'));
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", console.log.bind(console, "Successfully connected to gamestore db"));
 
 app.use(helmet());
 app.use('/', require("./routers"));
